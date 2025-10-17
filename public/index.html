@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slot Demo — Trang của bạn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Slot Demo (Không dùng tiền thật)</h1>
+
+    <div id="login" class="card">
+      <input id="name" placeholder="Nhập tên của bạn (tên hiển thị)" />
+      <button id="btn-login">Bắt đầu chơi</button>
+    </div>
+
+    <div id="game" class="hidden">
+      <div class="topbar">
+        <div>Người chơi: <span id="player-name"></span></div>
+        <div>Điểm: <span id="player-points">0</span></div>
+        <button id="btn-topup" class="danger">Nạp / Cộng điểm</button>
+      </div>
+
+      <div class="slot">
+        <div id="reel0" class="reel">🍒</div>
+        <div id="reel1" class="reel">🍋</div>
+        <div id="reel2" class="reel">🔔</div>
+      </div>
+
+      <div class="controls">
+        <input id="bet" type="number" value="10" min="1" />
+        <button id="spin">Quay</button>
+      </div>
+
+      <div id="result" class="card"></div>
+
+      <h3>BXH</h3>
+      <ul id="leaderboard"></ul>
+    </div>
+  </main>
+
+  <div id="telegram-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Yêu cầu cộng điểm qua Telegram</h2>
+      <p>Vui lòng nhắn tin tới CSKH Telegram để được cộng điểm. Nội dung mẫu đã có sẵn, bạn chỉ cần gửi:</p>
+      <pre id="tg-text"></pre>
+      <p><a id="tg-link" target="_blank" rel="noopener noreferrer">Mở Telegram</a></p>
+      <p class="muted">Nhớ thay <code>YOUR_TELEGRAM_USERNAME</code> bằng username Telegram thật của bạn.</p>
+      <button id="close-tg">Đóng</button>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
